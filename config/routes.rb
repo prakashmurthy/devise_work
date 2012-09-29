@@ -1,4 +1,6 @@
 DeviseWork::Application.routes.draw do
+  get "dashboard/welcome"
+
   devise_for :users
 
   # The priority is based upon order of creation:
