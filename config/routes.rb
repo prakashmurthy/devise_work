@@ -1,5 +1,6 @@
 DeviseWork::Application.routes.draw do
   get "dashboard/welcome"
+  post "dashboard/update_custom_status"
 
   devise_for :users
 
