@@ -13,4 +13,8 @@ class User < ActiveRecord::Base
   def online?
     updated_at > 10.minutes.ago
   end
+
+  def status
+    self.online? ? "ONLINE" : "OFFLINE"     
+  end
 end
