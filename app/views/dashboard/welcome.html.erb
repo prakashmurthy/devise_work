@@ -1,2 +1,12 @@
-<h1>Dashboard#welcome</h1>
-<p>Find me in app/views/dashboard/welcome.html.erb</p>
+<h1>Salespeople Status</h1>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.online? %></td>
+    </tr>
+  <% end %>
+</table>
