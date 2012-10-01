@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates :name, :presence => true
 
   def online?
-    updated_at > 10.minutes.ago
+    updated_at > Devise.timeout_in.ago
   end
 
   def status
