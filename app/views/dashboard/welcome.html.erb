@@ -10,14 +10,14 @@
     <th></th>
   </tr>
   <% @users.each do |user| %>
-    <tr>
+    <tr class="user-container">
       <td><%= user.name %></td>
       <td></td>
       <td><%= user.status %></td>
       <td></td>
-      <td><span id="custom-status"><%= user.custom_status %></span></td>
+      <td><span class="custom-status"><%= user.custom_status %></span></td>
       <td></td>
-      <td><%= button_tag( "Modify Custom Status", :class => "btn", :id => "custom-status-button" ) if user == @current_user %></td>
+      <td><%= button_tag( "Modify Custom Status", :class => "btn custom-status-button" ) if user == @current_user %></td>
     </tr>
   <% end %>
 </table>
