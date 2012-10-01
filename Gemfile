@@ -1,13 +1,21 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'thin'
+gem 'heroku'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development, :test do
+  gem 'mysql2', '0.3.11'
+end
 
-gem 'mysql2'
-gem 'devise'
-gem 'bootstrap-sass'
+group :production do
+  gem 'pg'
+end
+
+gem 'devise', '2.1.2'
+gem 'bootstrap-sass', '2.1.0.0'
 
 
 # Gems used only for assets and not required
@@ -22,7 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
