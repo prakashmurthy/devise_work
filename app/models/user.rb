@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
   end
 
   def status
-    self.online? ? "IN" : "OUT"     
+    self.logged_in && self.online? ? "IN" : "OUT"     
   end
 end
