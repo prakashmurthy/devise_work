@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :custom_status, :logged_in
   # attr_accessible :title, :body
+  validates :custom_status, :uniqueness => {:scope => :name}
   validates :name, :presence => true
 
   def online?
